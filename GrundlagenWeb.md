@@ -53,9 +53,9 @@ Sublime Text / Notepad++	Schnell, aber weniger Komfort
 
 ---
 
-🔐 2. Sicherheitsrisiken von Webanwendungen
+2. Sicherheitsrisiken von Webanwendungen
 
-| 🧨 **Angriff**                 | 📝 **Beschreibung**                                        | 💻 **Beispiel**                                  |
+|  **Angriff**                   |     **Beschreibung**                                        |   **Beispiel**                                  |
 | ------------------------------ | ---------------------------------------------------------- | ------------------------------------------------ |
 | **Phishing**                   | Täuschung der Nutzer durch gefälschte Webseiten oder Mails | Login-Seite imitiert Facebook                    |
 | **Datendiebstahl**             | Unbefugter Zugriff auf vertrauliche Informationen          | Gestohlene Passwörter aus Datenbanken            |
@@ -64,14 +64,14 @@ Sublime Text / Notepad++	Schnell, aber weniger Komfort
 | **Session Hijacking**          | Übernahme einer aktiven Benutzersitzung                    | Session-Cookies werden abgefangen                |
 | **Denial of Service (DoS)**    | Server wird mit Anfragen überlastet                        | Website ist nicht mehr erreichbar                |
 
+---
 
-
-🛡️ 3. Maßnahmen zum Schutz von Webanwendungen
+3. Maßnahmen zum Schutz von Webanwendungen
 
 Zum Schutz vor diesen Angriffen sind mehrere Sicherheitsebenen notwendig.
 Hier die wichtigsten Maßnahmen:
 
-| 🧰 **Maßnahme**                         | 📝 **Beschreibung**                               | 💡 **Beispiel**                                                |
+|    **Maßnahme**                         |     **Beschreibung**                               |   **Beispiel**                                                |
 | --------------------------------------- | ------------------------------------------------- | -------------------------------------------------------------- |
 | **Verschlüsselung (HTTPS)**             | Schutz der Datenübertragung durch TLS-Zertifikate | `https://` statt `http://`                                     |
 | **Multifaktor-Authentifizierung (MFA)** | Zusätzlicher Schutz beim Login                    | Passwort + Einmalcode per SMS                                  |
