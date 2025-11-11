@@ -55,16 +55,15 @@ Sublime Text / Notepad++	Schnell, aber weniger Komfort
 
 🔐 2. Sicherheitsrisiken von Webanwendungen
 
-Webanwendungen sind häufig Ziel von Angriffen, da sie sensible Daten verarbeiten.
-Hier die häufigsten Sicherheitsrisiken:
+| 🧨 **Angriff**                 | 📝 **Beschreibung**                                        | 💻 **Beispiel**                                  |
+| ------------------------------ | ---------------------------------------------------------- | ------------------------------------------------ |
+| **Phishing**                   | Täuschung der Nutzer durch gefälschte Webseiten oder Mails | Login-Seite imitiert Facebook                    |
+| **Datendiebstahl**             | Unbefugter Zugriff auf vertrauliche Informationen          | Gestohlene Passwörter aus Datenbanken            |
+| **SQL Injection (SQLi)**       | Einschleusen von SQL-Befehlen über Eingabefelder           | `SELECT * FROM users WHERE name = '' OR '1'='1'` |
+| **Cross-Site-Scripting (XSS)** | Einschleusen von JavaScript in Webseiten                   | `<script>alert('Hacked!')</script>`              |
+| **Session Hijacking**          | Übernahme einer aktiven Benutzersitzung                    | Session-Cookies werden abgefangen                |
+| **Denial of Service (DoS)**    | Server wird mit Anfragen überlastet                        | Website ist nicht mehr erreichbar                |
 
-Angriff	Beschreibung	Beispiel
-Phishing	Täuschung der Nutzer durch gefälschte Webseiten oder Mails	Login-Seite imitiert Facebook
-Datendiebstahl	Unbefugter Zugriff auf vertrauliche Informationen	Gestohlene Passwörter aus Datenbanken
-SQL Injection (SQLi)	Einschleusen von SQL-Befehlen über Eingabefelder	SELECT * FROM users WHERE name = '' OR '1'='1'
-Cross-Site-Scripting (XSS)	Einschleusen von JavaScript in Webseiten	<script>alert('Hacked!')</script>
-Session Hijacking	Übernahme einer aktiven Benutzersitzung	Session-Cookies werden abgefangen
-Denial of Service (DoS)	Server wird mit Anfragen überlastet	Website ist nicht mehr erreichbar
 
 
 🛡️ 3. Maßnahmen zum Schutz von Webanwendungen
@@ -72,11 +71,13 @@ Denial of Service (DoS)	Server wird mit Anfragen überlastet	Website ist nicht m
 Zum Schutz vor diesen Angriffen sind mehrere Sicherheitsebenen notwendig.
 Hier die wichtigsten Maßnahmen:
 
-Maßnahme	Beschreibung	Beispiel
-Verschlüsselung (HTTPS)	Schutz der Datenübertragung durch TLS-Zertifikate	https:// statt http://
-Multifaktor-Authentifizierung (MFA)	Zusätzlicher Schutz beim Login	Passwort + Einmalcode per SMS
-Prepared Statements / Sanitizing	Schutz vor SQL-Injections	$stmt = $pdo->prepare("SELECT * FROM users WHERE name = ?");
-Input Validation	Überprüfung von Nutzereingaben	Nur erlaubte Zeichen bei Formularen
-Session-Management	Sichere Cookies, automatische Ablaufzeiten	session_regenerate_id()
-Content Security Policy (CSP)	Schutz vor XSS durch restriktive Skriptquellen	Content-Security-Policy: default-src 'self';
-Regelmäßige Updates	Schließt bekannte Sicherheitslücken	PHP, Frameworks und Plugins aktuell halten
+| 🧰 **Maßnahme**                         | 📝 **Beschreibung**                               | 💡 **Beispiel**                                                |
+| --------------------------------------- | ------------------------------------------------- | -------------------------------------------------------------- |
+| **Verschlüsselung (HTTPS)**             | Schutz der Datenübertragung durch TLS-Zertifikate | `https://` statt `http://`                                     |
+| **Multifaktor-Authentifizierung (MFA)** | Zusätzlicher Schutz beim Login                    | Passwort + Einmalcode per SMS                                  |
+| **Prepared Statements / Sanitizing**    | Schutz vor SQL-Injections                         | `$stmt = $pdo->prepare("SELECT * FROM users WHERE name = ?");` |
+| **Input Validation**                    | Überprüfung von Nutzereingaben                    | Nur erlaubte Zeichen bei Formularen                            |
+| **Session-Management**                  | Sichere Cookies, automatische Ablaufzeiten        | `session_regenerate_id();`                                     |
+| **Content Security Policy (CSP)**       | Schutz vor XSS durch restriktive Skriptquellen    | `Content-Security-Policy: default-src 'self';`                 |
+| **Regelmäßige Updates**                 | Schließt bekannte Sicherheitslücken               | PHP, Frameworks und Plugins aktuell halten                     |
+
