@@ -16,8 +16,6 @@ Das Ziel dieser Anwendung ist es, sowohl Einsteigern als auch fortgeschrittenen 
 Um die neueste Version vom Master-Branch zu klonen und die Anwendung zu installieren, führe folgende Schritte aus:
 
 ```bash
-# Repository klonen
-git clone https://github.com/<dein-benutzername>/HelloWorld.git
 
 # In das Projektverzeichnis wechseln
 cd HelloWorld
