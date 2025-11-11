@@ -11,7 +11,7 @@ Das Ziel dieser Anwendung ist es, sowohl Einsteigern als auch fortgeschrittenen 
 
 ---
 
-## 🚀 Installation
+## Installation
 
 Um die neueste Version vom Master-Branch zu klonen und die Anwendung zu installieren, führe folgende Schritte aus:
 
