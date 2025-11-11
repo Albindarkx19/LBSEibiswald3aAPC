@@ -44,10 +44,39 @@ Ideal für Einsteiger, da alles vorkonfiguriert ist.
 Nur PHP erforderlich – kein komplettes Paket.  
 Diese Variante ist besonders nützlich für kleine Projekte oder Tests.
 
-**Schritte:**
-1. Stelle sicher, dass PHP installiert ist (`php -v` im Terminal).  
-2. Öffne dein Projektverzeichnis im Terminal.  
-3. Starte den Server:
 
-   ```bash
-   php -S localhost:8000
+🖊️ Editor / IDE mit PHP-Support
+Editor	Vorteile
+Visual Studio Code	Kostenlos, leichtgewichtig, mit PHP-Erweiterungen
+PhpStorm	Professionelle IDE mit Debugging und Code-Analyse
+Sublime Text / Notepad++	Schnell, aber weniger Komfort
+
+---
+
+🔐 2. Sicherheitsrisiken von Webanwendungen
+
+Webanwendungen sind häufig Ziel von Angriffen, da sie sensible Daten verarbeiten.
+Hier die häufigsten Sicherheitsrisiken:
+
+Angriff	Beschreibung	Beispiel
+Phishing	Täuschung der Nutzer durch gefälschte Webseiten oder Mails	Login-Seite imitiert Facebook
+Datendiebstahl	Unbefugter Zugriff auf vertrauliche Informationen	Gestohlene Passwörter aus Datenbanken
+SQL Injection (SQLi)	Einschleusen von SQL-Befehlen über Eingabefelder	SELECT * FROM users WHERE name = '' OR '1'='1'
+Cross-Site-Scripting (XSS)	Einschleusen von JavaScript in Webseiten	<script>alert('Hacked!')</script>
+Session Hijacking	Übernahme einer aktiven Benutzersitzung	Session-Cookies werden abgefangen
+Denial of Service (DoS)	Server wird mit Anfragen überlastet	Website ist nicht mehr erreichbar
+
+
+🛡️ 3. Maßnahmen zum Schutz von Webanwendungen
+
+Zum Schutz vor diesen Angriffen sind mehrere Sicherheitsebenen notwendig.
+Hier die wichtigsten Maßnahmen:
+
+Maßnahme	Beschreibung	Beispiel
+Verschlüsselung (HTTPS)	Schutz der Datenübertragung durch TLS-Zertifikate	https:// statt http://
+Multifaktor-Authentifizierung (MFA)	Zusätzlicher Schutz beim Login	Passwort + Einmalcode per SMS
+Prepared Statements / Sanitizing	Schutz vor SQL-Injections	$stmt = $pdo->prepare("SELECT * FROM users WHERE name = ?");
+Input Validation	Überprüfung von Nutzereingaben	Nur erlaubte Zeichen bei Formularen
+Session-Management	Sichere Cookies, automatische Ablaufzeiten	session_regenerate_id()
+Content Security Policy (CSP)	Schutz vor XSS durch restriktive Skriptquellen	Content-Security-Policy: default-src 'self';
+Regelmäßige Updates	Schließt bekannte Sicherheitslücken	PHP, Frameworks und Plugins aktuell halten
